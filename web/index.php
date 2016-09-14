@@ -2,7 +2,7 @@
 <html>
 <body>
 
-<h1>projet PHP</h1>
+<h1>projet PHP - Lalleau Hourdin</h1>
 
 <?php
 echo "Hello World!";
