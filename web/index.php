@@ -2,10 +2,10 @@
 <html>
 <body>
 
-<h1>projet PHP - Lalleau Hourdin</h1>
+<h1>PROJET</h1>
 
 <?php
-echo "Hello World!";
+echo "Projet de Louis Lalleau et Franck Hourdin";
 ?>
 
 </body>
