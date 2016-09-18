@@ -60,3 +60,8 @@ INSERT INTO needs(id_product,quantity,id_recipe) VALUES
 (2,200,1);
 INSERT INTO menu(jour,id_recipe) VALUES
 ('23-06-2016',1);
+
+/*CREATION USER*/
+CREATE USER 'usersql'@'localhost' IDENTIFIED BY 'pwduser';
+GRANT ALL PRIVILEGES ON PHP_PROJECT TO 'newuser'@'localhost';
+FLUSH PRIVILEGES;

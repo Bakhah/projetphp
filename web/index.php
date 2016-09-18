@@ -1,23 +1,23 @@
-<!DOCTYPE html>
-<html>
-<body>
+<?php
+include 'partial/header.php';
+include 'lib/connection.php';
+?>
 
   <h1>PROJET</h1>
 
   <?php
   echo "Projet de Louis Lalleau et Franck Hourdin";
+  GetMyConnection();
+
+  $sql = 'SELECT * FROM product';
+  $req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+  echo "<h3>Test d'affichage de la table product :</h3>";
+  while ($data = mysql_fetch_assoc($req)) {
+    echo '<br>'.$data[id].' '.$data[name].' '.$data[price].' '.$data[price].'€ '.$data[id_unit].'</br>';
+  };
+
   ?>
+
   <?php
-  $url = parse_url(getenv("mysql://b1e7da43505e81:c262d860@us-cdbr-iron-east-04.cleardb.net/heroku_ac34ed3693a91e3?reconnect=true
-  "));
-
-  $server = $url["host"];
-  $username = $url["user"];
-  $password = $url["pass"];
-  $db = substr($url["path"], 1);
-
-  $conn = new mysqli($server, $username, $password, $db);
+  include 'partial/footer.php';
   ?>
-
-</body>
-</html>
